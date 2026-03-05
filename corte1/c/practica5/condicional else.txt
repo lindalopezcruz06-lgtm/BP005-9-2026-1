@@ -4,7 +4,7 @@ int main () {
 
   int time;
 
-printf("Ingrese la hora: ");
+printf("Ingrese la hora en formato militar: ");
     scanf("%d", &time);
 
   if (time < 18) {
