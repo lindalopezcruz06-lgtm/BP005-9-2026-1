@@ -27,8 +27,8 @@ int main() {
     analizar(datos, 5, &suma, &mayor, &menor);
 
     printf("Suma = %d\n", suma);
-    printf("Suma = %d\n", mayor);
-    printf("Suma = %d\n", menor);
+    printf("Mayor = %d\n", mayor);
+    printf("Menor = %d\n", menor);
 
     return 0;
 }
