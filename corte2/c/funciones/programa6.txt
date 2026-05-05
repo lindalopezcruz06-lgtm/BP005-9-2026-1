@@ -1,1 +1,50 @@
+#include <stdio.h>
 
+
+void leerArreglo(int v[], int n);
+int obtenerMayor(int v[], int n);
+int obtenerMenor(int v[], int n);
+
+int main() {
+    int arreglo[6];
+    int mayor, menor;
+
+    leerArreglo(arreglo, 6);
+
+    mayor = obtenerMayor(arreglo, 6);
+    menor = obtenerMenor(arreglo, 6);
+
+    printf("\nMayor: %d\n", mayor);
+    printf("Menor: %d\n", menor);
+
+    return 0;
+}
+
+// Leer arreglo
+void leerArreglo(int v[], int n) {
+    int i;
+    for (i = 0; i < n; i++) {
+        printf("Digite el elemento %d: ", i);
+        scanf("%d", &v[i]);
+    }
+}
+
+int obtenerMayor(int v[], int n) {
+    int i, mayor = v[0];
+    for (i = 1; i < n; i++) {
+        if (v[i] > mayor) {
+            mayor = v[i];
+        }
+    }
+    return mayor;
+}
+
+int obtenerMenor(int v[], int n) {
+    int i, menor = v[0];
+    for (i = 1; i < n; i++) {
+        if (v[i] < menor) {
+            menor = v[i];
+        }
+    }
+    return menor;
+}
