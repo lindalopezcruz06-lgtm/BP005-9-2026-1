@@ -1,1 +1,56 @@
+#include <iostream>
+using namespace std;
 
+
+void leerArreglo(int v[], int n);
+int sumarArreglo(int v[], int n);
+float calcularPromedio(int suma, int n);
+void mostrarArreglo(int v[], int n);
+
+int main() {
+    int arreglo[5];
+    int suma;
+    float promedio;
+
+    leerArreglo(arreglo, 5);
+
+    cout << "\nElementos del arreglo:\n";
+    mostrarArreglo(arreglo, 5);
+
+    suma = sumarArreglo(arreglo, 5);
+
+    promedio = calcularPromedio(suma, 5);
+
+    cout << "\nSuma: " << suma << endl;
+    cout << "Promedio: " << promedio << endl;
+
+    return 0;
+}
+
+void leerArreglo(int v[], int n) {
+    int i;
+    for (i = 0; i < n; i++) {
+        cout << "Digite el elemento " << i << ": ";
+        cin >> v[i];
+    }
+}
+
+void mostrarArreglo(int v[], int n) {
+    int i;
+    for (i = 0; i < n; i++) {
+        cout << v[i] << " ";
+    }
+    cout << endl;
+}
+
+int sumarArreglo(int v[], int n) {
+    int i, suma = 0;
+    for (i = 0; i < n; i++) {
+        suma += v[i];
+    }
+    return suma;
+}
+
+float calcularPromedio(int suma, int n) {
+    return (float)suma / n;
+}
