@@ -1,1 +1,45 @@
+#include <iostream>
+using namespace std;
 
+
+int factorialIterativo(int n);
+int factorialRecursivo(int n);
+
+int main() {
+    int numero;
+    int factIter, factRec;
+
+    cout << "Digite un numero entero no negativo: ";
+    cin >> numero;
+
+    if (numero < 0) {
+        cout << "Error: el numero debe ser no negativo." << endl;
+        return 1;
+    }
+
+    factIter = factorialIterativo(numero);
+    factRec = factorialRecursivo(numero);
+
+    cout << "Factorial iterativo: " << factIter << endl;
+    cout << "Factorial recursivo: " << factRec << endl;
+
+    return 0;
+}
+
+int factorialIterativo(int n) {
+    int resultado = 1;
+
+    for (int i = 1; i <= n; i++) {
+        resultado *= i;
+    }
+
+    return resultado;
+}
+
+int factorialRecursivo(int n) {
+    if (n == 0 || n == 1) {
+        return 1;
+    } else {
+        return n * factorialRecursivo(n - 1);
+    }
+}
