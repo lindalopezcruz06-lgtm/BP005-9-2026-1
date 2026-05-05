@@ -1,1 +1,55 @@
+#include <stdio.h>
 
+
+void leerMatriz(int m[][3], int filas);
+void mostrarMatriz(int m[][3], int filas);
+int sumarMatriz(int m[][3], int filas);
+
+int main() {
+    int matriz[3][3];
+    int suma;
+
+    leerMatriz(matriz, 3);
+    mostrarMatriz(matriz, 3);
+    suma = sumarMatriz(matriz, 3);
+
+    printf("\nSuma total: %d\n", suma);
+
+    return 0;
+}
+
+void leerMatriz(int m[][3], int filas) {
+    int i, j;
+
+    for (i = 0; i < filas; i++) {
+        for (j = 0; j < 3; j++) {
+            printf("Digite m[%d][%d]: ", i, j);
+            scanf("%d", &m[i][j]);
+        }
+    }
+}
+
+void mostrarMatriz(int m[][3], int filas) {
+    int i, j;
+
+    printf("\nMatriz:\n");
+
+    for (i = 0; i < filas; i++) {
+        for (j = 0; j < 3; j++) {
+            printf("%d ", m[i][j]);
+        }
+        printf("\n");
+    }
+}
+
+int sumarMatriz(int m[][3], int filas) {
+    int i, j, suma = 0;
+
+    for (i = 0; i < filas; i++) {
+        for (j = 0; j < 3; j++) {
+            suma += m[i][j];
+        }
+    }
+
+    return suma;
+}
