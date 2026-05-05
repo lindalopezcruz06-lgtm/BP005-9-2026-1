@@ -1,1 +1,48 @@
+#include <iostream>
+using namespace std;
 
+
+float area(float lado);
+float area(float base, float altura);
+float area(float baseMayor, float baseMenor, float altura);
+
+int main() {
+    float lado, base, altura, baseMayor, baseMenor;
+
+    // Cuadrado
+    cout << "Ingrese el lado del cuadrado: ";
+    cin >> lado;
+
+    // Rectángulo
+    cout << "Ingrese la base del rectangulo: ";
+    cin >> base;
+    cout << "Ingrese la altura del rectangulo: ";
+    cin >> altura;
+
+    // Trapecio
+    cout << "Ingrese la base mayor del trapecio: ";
+    cin >> baseMayor;
+    cout << "Ingrese la base menor del trapecio: ";
+    cin >> baseMenor;
+    cout << "Ingrese la altura del trapecio: ";
+    cin >> altura;
+
+    cout << "\nResultados:\n";
+    cout << "Area del cuadrado: " << area(lado) << endl;
+    cout << "Area del rectangulo: " << area(base, altura) << endl;
+    cout << "Area del trapecio: " << area(baseMayor, baseMenor, altura) << endl;
+
+    return 0;
+}
+
+float area(float lado) {
+    return lado * lado;
+}
+
+float area(float base, float altura) {
+    return base * altura;
+}
+
+float area(float baseMayor, float baseMenor, float altura) {
+    return ((baseMayor + baseMenor) * altura) / 2;
+}
