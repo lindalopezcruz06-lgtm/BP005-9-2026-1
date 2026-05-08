@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+/* Variable global: existe durante toda la ejecución del programa. */
+int contadorGlobal = 0;
+
+void contar() {
+    /* Variable local normal: se crea cada vez que se llama la funcioin. */
+    int contadorLocalNormal = 0;
+
+   /* Variable local estatica: conserva su valor entre llamadas.*/
+   static int contadorLocalEstatico = 0;
+
+   contadorGlobal++;
+   contadorLocalNormal++;
+   contadorLocalEstatico++;
+
+   printf("GLobal       = %d\n", contadorGlobal);
+   printf("Local normal = %d\n", contadorLocalNormal);
+   printf("Local static = %d\n", contadorLocalEstatico);
+   printf("---------------------\n");
+}
+
+int main() {
+    contar();
+    contar();
+    contar();
+
+    return 0;
+}
