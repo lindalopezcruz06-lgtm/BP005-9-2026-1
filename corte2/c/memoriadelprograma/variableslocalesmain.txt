@@ -1,0 +1,13 @@
+#include <stdio.h> /* Incluye la biblioteca necesaria para printf. */
+
+int main(void) { /* Inicia la funcion principal del programa. */
+    int a = 10; /* Variable local de main. */
+    int b = 20; /* Variable local de main. */
+    int suma = 0; /* Variable local de main. */
+
+    suma = a + b; /* Usa las variables locales para calcular un resultado. */
+
+    printf("suma = %d\n", suma); /* Muestra el valor guardado en suma. */
+
+    return 0; /* Finalizacion exitosa del programa. */
+} /* Al terminar main, sus variables locales normales dejan de ser validas. */
