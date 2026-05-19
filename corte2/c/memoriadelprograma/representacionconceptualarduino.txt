@@ -1,0 +1,11 @@
+int main(void) { /* Punto de entrada conceptual del programa. */
+    inicializarHardware(); /* Preparacion interna de la tarjeta. */
+
+    setup(); /* Llamada una sola vez a la configuracion inicial. */
+
+    while (1) { /* Ciclo infinito propio de muchos sistemas embebidos. */
+        loop(); /* Llamada repetida al codigo principal del usuario. */
+    }
+
+    return 0; /* En una tarjeta embebida normalmente no se espera llegar aqui. */
+}
