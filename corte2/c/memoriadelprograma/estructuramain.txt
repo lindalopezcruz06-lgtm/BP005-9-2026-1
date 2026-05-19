@@ -1,0 +1,8 @@
+#include <stdio.h> /* Incluye una biblioteca de entrada y salida. */
+
+int main(void) { /* Funcion principal: aqui comienza la ejecucion del programa. */
+    printf("Hola desde C.\n"); /* Muestra un mensaje en la consola. */
+
+    return 0; /* Informa que el programa finalizo correctamente. */
+
+} /* Fin de la funcion main. */
