@@ -1,0 +1,15 @@
+#include <stdio.h> /* Incluye la biblioteca necesaria para usar printf. */
+
+int main(void) { /* Funcion principal: aqui inicia la ejecucion del programa. */
+    int a = 10; /* Declara una variable entera llamada a y guarda el valor 10. */
+    int b = 20; /* Declara una variable entera llamada b y guarda el valor 20. */
+    int suma = 0; /* Declara la variable suma y la inicializa en cero. */
+
+    suma = a + b; /* Suma los valores de a y b, y guarda el resultado en suma. */
+
+    printf("a = %d\n", a); /* Muestra en pantalla el valor almacenado en a. */
+    printf("b = %d\n", b); /* Muestra en pantalla el valor almacenado en b. */
+    printf("suma = %d\n", suma); /* Muestra en pantalla el resultado de la suma. */
+
+    return 0; /* Indica que el programa finalizo correctamente. */
+}   /* Fin de la funcion main. */
